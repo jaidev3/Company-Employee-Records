@@ -1,0 +1,27 @@
+.userBox{
+display: flex;
+align-content: center;
+justify-content: space-around;
+background-color:grey;
+width: 80%;
+color: white;
+margin: auto;
+margin-top:10px;
+border-radius: 5px;
+}
+
+.pagination{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 40%;
+    justify-content: space-around;
+    font-size:25px;
+    margin: auto;
+   
+}
+.paginationBox{
+    border:1px solid black;
+    border-radius:5px;
+    width: 40px;
+}
