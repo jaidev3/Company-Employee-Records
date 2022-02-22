@@ -4,13 +4,14 @@ import "./list.css";
 function List() {
   const [data, setData] = useState([]);
   const [page, setPage] = useState("");
+  const [p, setP] = useState(1);
   // const [salary, setSalary] = useState([]);
   useEffect(() => {
     getData();
     // getSalary();
-  }, []);
+  }, [p]);
   const getData = () => {
-    fetch("http://localhost:1234/user")
+    fetch(`http://localhost:1234/user?page=${p}`)
       .then((response) => response.json())
       .then((res) => {
         setData(res.user);
@@ -45,16 +46,16 @@ function List() {
         );
       })}
       <div className="pagination">
-        <div className="paginationBox">1</div>
-        <div className="paginationBox">2</div>
-        <div className="paginationBox">3</div>
-        <div className="paginationBox">4</div>
-        <div className="paginationBox">5</div>
-        <div className="paginationBox">6</div>
-        <div className="paginationBox">7</div>
-        <div className="paginationBox">8</div>
-        <div className="paginationBox">9</div>
-        <div className="paginationBox">10</div>
+        <button className="paginationBox" onClick={()=>{setP(1)}} >1</button>
+        <button className="paginationBox" onClick={()=>{setP(2)}} >2</button>
+        <button className="paginationBox" onClick={()=>{setP(3)}}>3</button>
+        <button className="paginationBox" onClick={()=>{setP(4)}}>4</button>
+        <button className="paginationBox" onClick={()=>{setP(5)}}>5</button>
+        <button className="paginationBox" onClick={()=>{setP(6)}}>6</button>
+        <button className="paginationBox" onClick={()=>{setP(7)}}>7</button>
+        <button className="paginationBox" onClick={()=>{setP(8)}}>8</button>
+        <button className="paginationBox" onClick={()=>{setP(9)}}>9</button>
+        <button className="paginationBox" onClick={()=>{setP(10)}}>10</button>
       </div>
     </>
   );
