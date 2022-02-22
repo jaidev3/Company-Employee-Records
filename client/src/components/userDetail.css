@@ -1,0 +1,16 @@
+/* .detail {
+} */
+
+.user-detail {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* .user-salary {
+} */

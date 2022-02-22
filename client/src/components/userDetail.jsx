@@ -1,5 +1,6 @@
-import { useParams, Navigate } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "./userDetail.css";
+import { useEffect, useState } from "react";
 export default function UserDetai() {
   const { _id } = useParams();
   const [data, setData] = useState("");
@@ -13,10 +14,19 @@ export default function UserDetai() {
         [_id]
       );
   });
-  
+
   return (
-    <div>
-      <h1>{data.first_name}</h1>
+    <div className="detail">
+      <div className="user-detail">
+        <h3>
+          {data.first_name} {data.last_name}
+        </h3>
+        <h3>{data.gender}</h3>
+        <h3>{data.email}</h3>
+      </div>
+      <div className="user-salary">
+        <h3>Salary : Rs {data.salary}</h3>
+      </div>
     </div>
   );
 }
