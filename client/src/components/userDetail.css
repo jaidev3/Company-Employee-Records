@@ -14,3 +14,8 @@
 
 /* .user-salary {
 } */
+button{
+  height:60%;
+  /* vertical-align: middle; */
+  align-self: center;
+}

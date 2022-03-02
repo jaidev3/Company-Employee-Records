@@ -23,6 +23,7 @@ export default function UserDetai() {
         </h3>
         <h3>{data.gender}</h3>
         <h3>{data.email}</h3>
+        <button>Edit</button>
       </div>
       <div className="user-salary">
         <h3>Salary : Rs {data.salary}</h3>
